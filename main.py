@@ -19,7 +19,7 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/plain'
         mode = self.request.get("hub.mode")
-        if mode == "suscribe":
+        if mode == "subscribe":
             challenge = self.request.get("hub.challege")
             verify_token = self.request.get("hub.verify_token")
             if verify_token == VERIFY_TOKEN:
