@@ -43,11 +43,11 @@ class MainPage(webapp2.RequestHandler):
                         logging.info("Mensaje obtenido; %s", message_text)
                         logging.info("Sender_id; %s", sender_id)
                         #bot handle
-                        self.bot.handle(sender_id,message_text)
+                        self.bot.handle(sender_id, message_text)
                         #send_message(sender_id, "Hola, gracias por contactarnos!")
                     if messaging_event.get("postback"):
                         logging.info("Post-back")
-        
+         
 def send_message(recipient_id, message_text, possible_answers):
     logging.info("Enviando mensaje a %r: %s", recipient_id, message_text)
     headers = {
